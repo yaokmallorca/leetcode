@@ -81,7 +81,17 @@ public:
 	}
 
 	ListNode* removeNthFromEnd(ListNode* head, int n) {
-		
+		if (!head->next) return nullptr;
+		ListNode *prev = head, *curr = head;
+		for (int i = 0; i<n; i++) {
+			curr = curr->next;
+		}
+		if (!curr) return head->next;
+		while( curr->next) {
+			curr = curr->next;
+			prev = prev->next;
+		}
+		prev->next = prev->next->next;
 		return head;
 	}
 };
