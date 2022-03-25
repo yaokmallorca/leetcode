@@ -13,7 +13,7 @@ class Solution
 {
 public:
 	// topological sort
-	std::vector<int> findMinHeightTrees(int n, std::vector< std::vector<int> >& edges) {
+	std::vector<int> findMinHeightTrees1(int n, std::vector< std::vector<int> >& edges) {
 		std::vector< std::vector<int> > adj(n, std::vector<int>());
 		std::vector<int> degrees(n, 0); 
 		std::vector<int> ret;
